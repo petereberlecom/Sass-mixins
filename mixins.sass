@@ -1,0 +1,69 @@
+$FS-h1-sm: 	2em
+$FS-h2-sm: 	$FS-h1-sm/1.1
+$FS-h3-sm:	$FS-h1-sm/1.2
+$FS-h4-sm:	$FS-h1-sm/1.3
+$FS-ps-sm:	$FS-h1-sm/1.6
+$FS-pl-sm:	$FS-h1-sm/1.4
+$FS-pi-sm:	$FS-h1-sm/1.4
+
+// $FS-h1-md:
+// $FS-h2-md:
+// $FS-h3-md:
+// $FS-h4-md:
+// $FS-ps-md:
+// $FS-pl-md:
+// $FS-pi-md:
+
+// $F-h1-lg:
+// $F-h2-lg:
+// $F-h3-lg:
+// $F-h4-lg:
+// $F-ps-lg:
+// $F-pl-lg:
+// $F-pi-lg:
+
+
+
+
+
+
+
+// mixin for responsive Fonts
+@mixin FS($fontSize)
+	@if $fontSize == h1
+		h1
+			font-size: $FS-h1-sm
+
+	@if $fontSize == h2
+		h2
+			font-size: $FS-h2-sm
+
+	@if $fontSize == h3
+		h3
+			font-size: $FS-h3-sm
+
+	@if $fontSize == h4
+		h4
+			font-size: $FS-h4-sm
+
+	@if $fontSize == ps
+		p
+			font-size: $FS-ps-sm
+
+	@if $fontSize == pl
+		p
+			font-size: $FS-pl-sm
+
+	@if $fontSize == pi
+		p
+			font-size: $FS-pi-sm
+			font-style: italic
+
+
++FS(h1)
++FS(h2)
++FS(h3)
++FS(h4)
++FS(ps)
++FS(pl)
++FS(pi)
