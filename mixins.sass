@@ -29,22 +29,11 @@ $FS-pi-sm:	$FS-h1-sm/1.4
 
 
 // mixin for responsive Fonts
-@mixin FS($fontSize)
-	@if $fontSize == h1
-		h1
-			font-size: $FS-h1-sm
-
-	@if $fontSize == h2
-		h2
-			font-size: $FS-h2-sm
-
-	@if $fontSize == h3
-		h3
-			font-size: $FS-h3-sm
-
-	@if $fontSize == h4
-		h4
-			font-size: $FS-h4-sm
+=FS($fontSize)
+	@if $fontSize == h1 or $fontSize == h2 or $fontSize == h3 or $fontSize == h4
+		#{$fontSize}
+			font-size: $FS-#{$fontSize}
+		
 
 	@if $fontSize == ps
 		p
