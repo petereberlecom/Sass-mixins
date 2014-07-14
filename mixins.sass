@@ -35,3 +35,15 @@ $FS-pi-sm:		$FS-h1-sm/1.4
 =CE
 	margin: 0
 	padding: 0
+
+
+// Cross browser Gradient with two colors
+=GRA($color_1, $color_2)
+	background: $color_1
+	background: -moz-linear-gradient(top, $color_1 0%, $color_2 100%)
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color_1), color-stop(100%,$color_2))
+	background: -webkit-linear-gradient(top, $color_1 0%,$color_2 100%)
+	background: -o-linear-gradient(top, $color_1 0%,$color_2 100%)
+	background: -ms-linear-gradient(top, $color_1 0%,$color_2 100%)
+	background: linear-gradient(to bottom, $color_1 0%,$color_2 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color_1', endColorstr='$color_2',GradientType=0 )
