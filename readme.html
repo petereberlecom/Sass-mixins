@@ -1,2 +1,29 @@
 <h1 id="sass-mixins-in-production-mode">Sass Mixins, in production mode</h1>
 <h2 id="small-little-helpers">small little helpers</h2>
+<h3 id="1-fs-font-font-size">1. FS($font) - Font Size</h3>
+<p>for responsive and absolute sized Fonts</p>
+<pre><code class="lang-sass">=FS($fontSize)
+    @if $fontSize == h1 or $fontSize == h2 or $fontSize == h3 or $fontSize == h4
+        #{$fontSize}
+            // font-size: $FS-#{$fontSize}
+
+
+    @if $fontSize == ps
+        p
+            font-size: $FS-ps-sm
+
+    @if $fontSize == pl
+        p
+            font-size: $FS-pl-sm
+
+    @if $fontSize == pi
+        p
+            font-size: $FS-pi-sm
+            font-style: italic
+</code></pre>
+<h3 id="2-ce-clear-everything">2. CE - Clear Everything</h3>
+<pre><code>quick overwrite of margin and padding
+</code></pre><pre><code class="lang-sass">    =CE
+        margin: 0
+        padding: 0
+</code></pre>
