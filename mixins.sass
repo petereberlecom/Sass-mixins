@@ -10,6 +10,10 @@ $FS-pi-sm:		$FS-h1-sm/1.4
 
 
 // mixin for responsive Fonts
+//
+//
+//
+// Compatible in IE6+, Firefox 2+, Safari 4+.
 =FS($fontSize)
 	@if $fontSize == h1 or $fontSize == h2 or $fontSize == h3 or $fontSize == h4
 		#{$fontSize}
@@ -32,12 +36,19 @@ $FS-pi-sm:		$FS-h1-sm/1.4
 
 
 // mixin Clear Everything
+//
+// Compatible in IE6+, Firefox 2+, Safari 4+.
 =CE
 	margin: 0
 	padding: 0
 
 
 // Cross browser Gradient with two colors
+//
+// $color_1 - first Color
+// $color_2 - second Color
+//
+// Compatible in IE8+
 =GRA($color_1, $color_2)
 	background: $color_1
 	background: -moz-linear-gradient(top, $color_1 0%, $color_2 100%)
