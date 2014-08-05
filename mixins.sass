@@ -43,6 +43,20 @@ $FS-pi-sm:		$FS-h1-sm/1.4
 	padding: 0
 
 
+
+// mixin Clear Child
+//
+// Compatible in IE6+, Firefox 2+, Safari 4+.
+=CC
+	&:first-child
+		margin-top: 0
+		padding-top: 0
+	&:last-child
+		margin-bottom: 0
+		padding-bottom: 0
+
+
+
 // Cross browser Gradient with two colors
 //
 // $color_1 - first Color
@@ -58,3 +72,16 @@ $FS-pi-sm:		$FS-h1-sm/1.4
 	background: -ms-linear-gradient(top, $color_1 0%,$color_2 100%)
 	background: linear-gradient(to bottom, $color_1 0%,$color_2 100%)
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color_1', endColorstr='$color_2',GradientType=0 )
+
+
+
+// Cross browser Border Radius
+//
+// $radius - Radius of all corners
+//
+// Compatible - untested
+=BR($radius)
+	-moz-border-radius: $radius
+	-webkit-border-radius: $radius
+	border-radius: $radius
+	-khtml-border-radius: $radius
