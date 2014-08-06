@@ -1,3 +1,10 @@
+// Status - unfinished
+
+// mixin for responsive Fonts
+//
+//
+//
+// Compatible - untested
 $FS-h1-sm: 	2em
 $FS-h2-sm: 	$FS-h1-sm/1.1
 $FS-h3-sm:	$FS-h1-sm/1.2
@@ -6,14 +13,6 @@ $FS-ps-sm:	$FS-h1-sm/1.6
 $FS-pl-sm:		$FS-h1-sm/1.4
 $FS-pi-sm:		$FS-h1-sm/1.4
 
-
-
-
-// mixin for responsive Fonts
-//
-//
-//
-// Compatible in IE6+, Firefox 2+, Safari 4+.
 =FS($fontSize)
 	@if $fontSize == h1 or $fontSize == h2 or $fontSize == h3 or $fontSize == h4
 		#{$fontSize}
@@ -37,7 +36,7 @@ $FS-pi-sm:		$FS-h1-sm/1.4
 
 // mixin Clear Everything
 //
-// Compatible in IE6+, Firefox 2+, Safari 4+.
+// Compatible - untested
 =CE
 	margin: 0
 	padding: 0
@@ -46,7 +45,7 @@ $FS-pi-sm:		$FS-h1-sm/1.4
 
 // mixin Clear Child
 //
-// Compatible in IE6+, Firefox 2+, Safari 4+.
+// Compatible - untested
 =CC
 	&:first-child
 		margin-top: 0
@@ -62,14 +61,14 @@ $FS-pi-sm:		$FS-h1-sm/1.4
 // $color_1 - first Color
 // $color_2 - second Color
 //
-// Compatible in IE8+
+// Compatible - untested
 =GRA($color_1, $color_2)
 	background: $color_1
 	background: -moz-linear-gradient(top, $color_1 0%, $color_2 100%)
+	background: -ms-linear-gradient(top, $color_1 0%,$color_2 100%)
+	background: -o-linear-gradient(top, $color_1 0%,$color_2 100%)
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color_1), color-stop(100%,$color_2))
 	background: -webkit-linear-gradient(top, $color_1 0%,$color_2 100%)
-	background: -o-linear-gradient(top, $color_1 0%,$color_2 100%)
-	background: -ms-linear-gradient(top, $color_1 0%,$color_2 100%)
 	background: linear-gradient(to bottom, $color_1 0%,$color_2 100%)
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color_1', endColorstr='$color_2',GradientType=0 )
 
@@ -81,7 +80,7 @@ $FS-pi-sm:		$FS-h1-sm/1.4
 //
 // Compatible - untested
 =BR($radius)
+	-khtml-border-radius: $radius
 	-moz-border-radius: $radius
 	-webkit-border-radius: $radius
 	border-radius: $radius
-	-khtml-border-radius: $radius
