@@ -84,3 +84,18 @@ $FS-pi-sm:		$FS-h1-sm/1.4
 	-moz-border-radius: $radius
 	-webkit-border-radius: $radius
 	border-radius: $radius
+
+// Cross browser font-smoothing
+//
+// $value: bool
+//
+// Compatible - untested
+=font-smoothing($value: on) 
+	@if $value == on 
+		-webkit-font-smoothing: antialiased
+		-moz-osx-font-smoothing: grayscale
+	
+	@else 
+		-webkit-font-smoothing: subpixel-antialiased
+		-moz-osx-font-smoothing: auto
+	
